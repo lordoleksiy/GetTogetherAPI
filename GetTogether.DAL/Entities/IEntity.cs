@@ -1,4 +1,4 @@
-﻿namespace GetTogether.DAL.Interfaces;
+﻿namespace GetTogether.DAL.Entities;
 
 public interface IEntity<T>
 {

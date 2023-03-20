@@ -1,0 +1,12 @@
+D:\Programming\C#\GetTogether\GetTogether.Common\bin\Debug\net6.0\GetTogether.Common.deps.json
+D:\Programming\C#\GetTogether\GetTogether.Common\bin\Debug\net6.0\GetTogether.Common.dll
+D:\Programming\C#\GetTogether\GetTogether.Common\bin\Debug\net6.0\GetTogether.Common.pdb
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.csproj.AssemblyReference.cache
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.AssemblyInfoInputs.cache
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.AssemblyInfo.cs
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.csproj.CoreCompileInputs.cache
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.dll
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\refint\GetTogether.Common.dll
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\GetTogether.Common.pdb
+D:\Programming\C#\GetTogether\GetTogether.Common\obj\Debug\net6.0\ref\GetTogether.Common.dll

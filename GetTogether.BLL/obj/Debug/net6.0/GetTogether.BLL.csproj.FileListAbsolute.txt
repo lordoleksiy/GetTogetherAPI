@@ -1,0 +1,17 @@
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.csproj.AssemblyReference.cache
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.AssemblyInfoInputs.cache
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.AssemblyInfo.cs
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.csproj.CoreCompileInputs.cache
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.BLL.deps.json
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.BLL.dll
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.BLL.pdb
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.Common.dll
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.DAL.dll
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.Common.pdb
+D:\Programming\C#\GetTogether\GetTogether.BLL\bin\Debug\net6.0\GetTogether.DAL.pdb
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.csproj.CopyComplete
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.dll
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\refint\GetTogether.BLL.dll
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\GetTogether.BLL.pdb
+D:\Programming\C#\GetTogether\GetTogether.BLL\obj\Debug\net6.0\ref\GetTogether.BLL.dll

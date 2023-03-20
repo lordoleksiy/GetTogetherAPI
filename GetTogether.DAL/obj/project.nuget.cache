@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hF+4xbRdxssWr068407MZwSWAAHvGZzDrS3/lIqzawqNxtWplIkAa5ZpzdOc/jfIzvYp2KUXBtcOzEPVeCBlUg==",
+  "dgSpecHash": "AdQAW0HTv+mpRgAIL9Tlgui+jFkMuTSUpNv2ufY1qo532CKad4gk8s+a7L1mKfjCHfVdDucwXJcOyJVLBOq1AA==",
   "success": true,
   "projectFilePath": "D:\\Programming\\C#\\GetTogether\\GetTogether.DAL\\GetTogether.DAL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lordo\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\lordo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\lordo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.4\\microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
     "C:\\Users\\lordo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.4\\microsoft.entityframeworkcore.abstractions.7.0.4.nupkg.sha512",

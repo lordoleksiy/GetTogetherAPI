@@ -4,23 +4,24 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace GetTogether.DAL.Context.ModelConfigurations;
 
-public class ProfileConfiguration : IEntityTypeConfiguration<UserProfile>
+public class UserConfiguration : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<UserProfile> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.Property(u => u.Name).IsRequired();
+        builder.HasIndex(u => u.Login).IsUnique(true);
 
         builder
             .HasMany(u => u.Followers)
             .WithMany(u => u.Following)
             .UsingEntity<object>(
                 j => j
-                    .HasOne<UserProfile>()
+                    .HasOne<User>()
                     .WithMany()
                     .HasForeignKey("UserId")
                     .OnDelete(DeleteBehavior.Cascade),
                 j => j
-                    .HasOne<UserProfile>()
+                    .HasOne<User>()
                     .WithMany()
                     .HasForeignKey("FollowerId")
                     .OnDelete(DeleteBehavior.Cascade),

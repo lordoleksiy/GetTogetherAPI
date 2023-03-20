@@ -1,6 +1,4 @@
-﻿using GetTogether.DAL.Interfaces;
-
-namespace GetTogether.DAL.Entities;
+﻿namespace GetTogether.DAL.Entities;
 
 public class Message: IEntity<int>
 {
@@ -9,7 +7,7 @@ public class Message: IEntity<int>
     public int ChatId { get; set; }
     public ChatGroup ChatGroup { get; set; }
     public int AuthorId { get; set; }
-    public UserProfile Author { get; set; }
+    public User Author { get; set; }
     public int? RepliedPersonId { get; set; }
-    public UserProfile? RepliedPerson { get; set; }
+    public User? RepliedPerson { get; set; }
 }

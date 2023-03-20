@@ -13,7 +13,7 @@ public class ChatConfiguration : IEntityTypeConfiguration<ChatGroup>
         .WithMany(u => u.Groups)
         .UsingEntity<object>(
             j => j
-                .HasOne<UserProfile>()
+                .HasOne<User>()
                 .WithMany()
                 .HasForeignKey("UserId")
                 .OnDelete(DeleteBehavior.Cascade),

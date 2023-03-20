@@ -54,3 +54,10 @@ D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\System.CodeDom
 D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\System.Text.Json.dll
 D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\AutoMapper.dll
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\GetTogether.BLL.dll
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\GetTogether.Common.dll
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\GetTogether.BLL.pdb
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\GetTogether.Common.pdb
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\Bogus.dll
