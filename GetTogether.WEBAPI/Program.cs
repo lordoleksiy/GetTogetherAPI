@@ -1,4 +1,5 @@
 using CollectionsAndLinq.WebApi.Infrastructure;
+using GetTogether.WEBAPI.Infrastructure;
 
 namespace GetTogether.WEBAPI
 {
@@ -7,10 +8,10 @@ namespace GetTogether.WEBAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
             // Add services to the container.
 
             builder.Services.AddConfig(builder.Configuration);
+
 
             var app = builder.Build();
 
@@ -27,6 +28,7 @@ namespace GetTogether.WEBAPI
 
 
             app.MapControllers();
+            app.UseStartupMigrations();
 
             app.Run();
         }
