@@ -11,4 +11,5 @@ public interface IUserService
 {
     Task<ICollection<UserDTO>> GetAll();
     Task<UserDTO> GetById(int id);
+    Task<UserDTO> Post(NewUserDTO userDTO);
 }

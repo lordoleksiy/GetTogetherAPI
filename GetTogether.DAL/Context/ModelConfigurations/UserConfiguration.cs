@@ -10,6 +10,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
     {
         builder.Property(u => u.Name).IsRequired();
         builder.HasIndex(u => u.Login).IsUnique(true);
+        builder.HasIndex(u => u.Email).IsUnique(true);
 
         builder
             .HasMany(u => u.Followers)

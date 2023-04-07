@@ -1,6 +1,4 @@
-﻿
-
-using Bogus;
+﻿using Bogus;
 using GetTogether.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +22,7 @@ public static class Seeder
             .RuleFor(u => u.Name, f => f.Person.FirstName)
             .RuleFor(u => u.Login, f => f.Person.UserName)
             .RuleFor(u => u.Description, f => f.Person.Website)
+            .RuleFor(u => u.Email, f => f.Person.Email)
             .Generate(count);
     }
 }

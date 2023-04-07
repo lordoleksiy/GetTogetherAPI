@@ -92,6 +92,10 @@ namespace GetTogether.DAL.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Login")
                         .IsRequired()
                         .HasColumnType("text");
@@ -102,6 +106,9 @@ namespace GetTogether.DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.HasIndex("Login")
                         .IsUnique();
 
@@ -111,37 +118,42 @@ namespace GetTogether.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "sherman.net",
-                            Login = "Dora.Stamm",
-                            Name = "Dora"
+                            Description = "muhammad.name",
+                            Email = "Byron_Lehner72@yahoo.com",
+                            Login = "Byron.Lehner18",
+                            Name = "Byron"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "sally.info",
-                            Login = "Juan.Swift",
-                            Name = "Juan"
+                            Description = "russell.biz",
+                            Email = "Gerard65@gmail.com",
+                            Login = "Gerard_Hegmann",
+                            Name = "Gerard"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "nyah.biz",
-                            Login = "Nellie_Ankunding8",
-                            Name = "Nellie"
+                            Description = "abdul.info",
+                            Email = "Robyn2@yahoo.com",
+                            Login = "Robyn.OConner",
+                            Name = "Robyn"
                         },
                         new
                         {
                             Id = 4,
-                            Description = "devin.biz",
-                            Login = "Julia.King",
-                            Name = "Julia"
+                            Description = "julianne.com",
+                            Email = "Juana.Grimes@gmail.com",
+                            Login = "Juana.Grimes15",
+                            Name = "Juana"
                         },
                         new
                         {
                             Id = 5,
-                            Description = "lenny.org",
-                            Login = "Lewis86",
-                            Name = "Lewis"
+                            Description = "clementina.biz",
+                            Email = "Bethany5@hotmail.com",
+                            Login = "Bethany.Schumm",
+                            Name = "Bethany"
                         });
                 });
 

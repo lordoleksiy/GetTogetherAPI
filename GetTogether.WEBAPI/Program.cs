@@ -11,7 +11,9 @@ namespace GetTogether.WEBAPI
             // Add services to the container.
 
             builder.Services.AddConfig(builder.Configuration);
-
+            builder.Services.AddFirebaseAuthorization(builder.Configuration);
+            builder.Services.AddValidators();
+            builder.Services.AddCors();
 
             var app = builder.Build();
 
@@ -21,9 +23,15 @@ namespace GetTogether.WEBAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
             app.UseHttpsRedirection();
+            app.UseCors(opt => opt
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowAnyOrigin());
 
+            app.UseMiddlewares();
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
