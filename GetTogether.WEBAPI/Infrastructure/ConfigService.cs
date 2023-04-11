@@ -27,6 +27,7 @@ public static class ConfigServices
         services.AddDbContext<DataContext>(options => options.UseNpgsql(config.GetConnectionString("DbContext")), ServiceLifetime.Scoped);
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IAccountService, AccountService>();
         services.AddFirebaseApp();
     }
 

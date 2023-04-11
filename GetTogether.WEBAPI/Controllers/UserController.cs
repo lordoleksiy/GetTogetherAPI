@@ -24,17 +24,31 @@ namespace GetTogether.WEBAPI.Controllers
             return Ok(users);
         }
 
-        [HttpGet("{userId}")]
-        public async Task<ActionResult<UserDTO>> GetAsync(int userId)
+        [HttpGet("user")]
+        public async Task<ActionResult<UserDTO>> GetUser()
         {
-            var sample = await _userService.GetById(userId);
-            return Ok(sample);
+            var user = await _userService.GetUser();
+            return Ok(user);
         }
 
         [HttpPost]
         public async Task<ActionResult<UserDTO>> Post([FromBody]NewUserDTO userDTO)
         {
-            var user = await _userService.Post(userDTO);
+            var user = await _userService.CreateUser(userDTO);
+            return Ok(user);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<UserDTO>> Put([FromBody]UserDTO userDTO)
+        {
+            var user = await _userService.UpdateUser(userDTO);
+            return Ok(user);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult<UserDTO>> DeleteUser()
+        {
+            var user = await _userService.DeleteUser();
             return Ok(user);
         }
     }

@@ -1,4 +1,5 @@
 using CollectionsAndLinq.WebApi.Infrastructure;
+using EasySpeak.Core.WebAPI.Middlewares;
 using GetTogether.WEBAPI.Infrastructure;
 
 namespace GetTogether.WEBAPI
@@ -33,7 +34,7 @@ namespace GetTogether.WEBAPI
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
             app.MapControllers();
             app.UseStartupMigrations();

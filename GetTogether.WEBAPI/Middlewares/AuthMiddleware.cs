@@ -1,4 +1,6 @@
 ﻿using System.Security.Claims;
+using FirebaseAdmin.Auth;
+using GetTogether.BLL.Interfaces;
 
 namespace GetTogether.WEBAPI.Middlewares;
 
@@ -11,7 +13,7 @@ public class AuthMiddleware
         _next = next;
     }
 
-    public async Task Invoke(HttpContext context)
+    public async Task Invoke(HttpContext context, IAccountService firebaseAuthService)
     {
         var authorizationHeader = context.Request.Headers["Authorization"].FirstOrDefault();
         if (authorizationHeader == null || !authorizationHeader.StartsWith("Bearer "))
@@ -22,17 +24,13 @@ public class AuthMiddleware
 
         var idToken = authorizationHeader["Bearer ".Length..];
 
-        var decodedToken = await FirebaseAdmin.Auth.FirebaseAuth.DefaultInstance.VerifyIdTokenAsync(idToken);
-        Console.WriteLine(idToken);
-        //var claims = new List<Claim>();
-        //claims.Add(new Claim(ClaimTypes.NameIdentifier, decodedToken.Uid));
-        //claims.Add(new Claim(ClaimTypes.Name, decodedToken.Name));
-        //claims.Add(new Claim(ClaimTypes.Email, decodedToken.Email));
+        var decodedToken = await FirebaseAuth.DefaultInstance.VerifyIdTokenAsync(idToken);
+        var userEmail = decodedToken.Claims["email"].ToString();
 
-        //var identity = new ClaimsIdentity(claims, "Firebase");
-        //var principal = new ClaimsPrincipal(identity);
-
-        //context.User = principal;
+        if (userEmail != null)
+        {
+            await firebaseAuthService.SetUserId(userEmail);
+        }
 
         await _next(context);
     }
