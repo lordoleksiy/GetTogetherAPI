@@ -81,3 +81,4 @@ D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\System.Identit
 D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\FluentValidation.dll
 D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Programming\C#\GetTogether\GetTogether.WEBAPI\bin\Debug\net6.0\Firebase.Storage.dll

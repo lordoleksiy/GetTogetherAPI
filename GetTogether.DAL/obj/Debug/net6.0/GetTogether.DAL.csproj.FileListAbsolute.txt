@@ -12,3 +12,6 @@ D:\Programming\C#\GetTogether\GetTogether.DAL\obj\Debug\net6.0\GetTogether.DAL.p
 D:\Programming\C#\GetTogether\GetTogether.DAL\obj\Debug\net6.0\ref\GetTogether.DAL.dll
 D:\Programming\C#\GetTogether\GetTogether.DAL\bin\Debug\net6.0\GetTogether.DAL.runtimeconfig.json
 D:\Programming\C#\GetTogether\GetTogether.DAL\obj\Debug\net6.0\GetTogether.DAL.genruntimeconfig.cache
+D:\Programming\C#\GetTogether\GetTogether.DAL\bin\Debug\net6.0\GetTogether.Common.dll
+D:\Programming\C#\GetTogether\GetTogether.DAL\bin\Debug\net6.0\GetTogether.Common.pdb
+D:\Programming\C#\GetTogether\GetTogether.DAL\obj\Debug\net6.0\GetTogether.DAL.csproj.CopyComplete

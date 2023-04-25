@@ -1,4 +1,4 @@
-﻿namespace EasySpeak.Core.WebAPI.Middlewares;
+﻿namespace GetTogether.Core.WebAPI.Middlewares;
 
 public class GlobalExceptionHandlerMiddleware
 {

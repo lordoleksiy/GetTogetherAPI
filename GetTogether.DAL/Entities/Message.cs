@@ -1,13 +1,13 @@
 ﻿namespace GetTogether.DAL.Entities;
 
-public class Message: IEntity<int>
+public class Message: IEntity<long>
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string text { get; set; }
-    public int ChatId { get; set; }
+    public long ChatId { get; set; }
     public ChatGroup ChatGroup { get; set; }
-    public int AuthorId { get; set; }
+    public long AuthorId { get; set; }
     public User Author { get; set; }
-    public int? RepliedPersonId { get; set; }
+    public long? RepliedPersonId { get; set; }
     public User? RepliedPerson { get; set; }
 }

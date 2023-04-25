@@ -1,5 +1,7 @@
 ﻿using GetTogether.BLL.Interfaces;
+using GetTogether.Common.DTO.Image;
 using GetTogether.Common.DTO.User;
+using GetTogether.WEBAPI.Validation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +34,7 @@ namespace GetTogether.WEBAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<UserDTO>> Post([FromBody]NewUserDTO userDTO)
+        public async Task<ActionResult<UserDTO>> CreateUser([FromBody]NewUserDTO userDTO)
         {
             var user = await _userService.CreateUser(userDTO);
             return Ok(user);
@@ -50,6 +52,17 @@ namespace GetTogether.WEBAPI.Controllers
         {
             var user = await _userService.DeleteUser();
             return Ok(user);
+        }
+
+        [HttpPost("avatar")]
+        public async Task<ActionResult> UploadAvatar(IFormFile image)
+        {
+            if (image.Validate())
+            {
+                NewImageDTO imgDTO = new(image.OpenReadStream(), image.FileName);
+                return Ok(await _userService.UploadAvatar(imgDTO));
+            }
+            return BadRequest();
         }
     }
 }

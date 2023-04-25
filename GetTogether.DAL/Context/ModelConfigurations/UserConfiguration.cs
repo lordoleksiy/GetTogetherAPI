@@ -31,5 +31,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                     j.HasKey("UserId", "FollowerId");
                     j.ToTable("Following");
                 });
+        builder.HasOne(u => u.ImageAvatar)
+            .WithOne()
+            .HasForeignKey<User>(u => u.ImageId)
+            .OnDelete(DeleteBehavior.SetNull);
     }
 }

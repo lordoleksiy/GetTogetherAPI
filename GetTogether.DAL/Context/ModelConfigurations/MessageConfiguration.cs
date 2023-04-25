@@ -12,10 +12,13 @@ public class MessageConfiguration : IEntityTypeConfiguration<Message>
         builder.Property(m => m.AuthorId).IsRequired();
         builder
             .HasOne(m => m.Author)
-            .WithOne();
+            .WithOne()
+            .HasForeignKey<Message>(m => m.AuthorId);
+
         builder
             .HasOne(m => m.RepliedPerson)
-            .WithOne();
+            .WithOne()
+            .HasForeignKey<Message>(m => m.RepliedPersonId);
             
 
     }

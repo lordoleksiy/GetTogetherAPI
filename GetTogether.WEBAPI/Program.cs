@@ -1,5 +1,5 @@
 using CollectionsAndLinq.WebApi.Infrastructure;
-using EasySpeak.Core.WebAPI.Middlewares;
+using GetTogether.Core.WebAPI.Middlewares;
 using GetTogether.WEBAPI.Infrastructure;
 
 namespace GetTogether.WEBAPI

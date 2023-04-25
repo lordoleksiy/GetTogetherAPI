@@ -24,14 +24,14 @@ namespace GetTogether.DAL.Migrations
 
             modelBuilder.Entity("GetTogether.DAL.Entities.ChatGroup", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<int>("CreatorId")
-                        .HasColumnType("integer");
+                    b.Property<long>("CreatorId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
@@ -47,22 +47,42 @@ namespace GetTogether.DAL.Migrations
                     b.ToTable("ChatGroups");
                 });
 
+            modelBuilder.Entity("GetTogether.DAL.Entities.Image", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Url")
+                        .IsUnique();
+
+                    b.ToTable("Image");
+                });
+
             modelBuilder.Entity("GetTogether.DAL.Entities.Message", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<int>("AuthorId")
-                        .HasColumnType("integer");
+                    b.Property<long>("AuthorId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("ChatId")
-                        .HasColumnType("integer");
+                    b.Property<long>("ChatId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int?>("RepliedPersonId")
-                        .HasColumnType("integer");
+                    b.Property<long?>("RepliedPersonId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("text")
                         .IsRequired()
@@ -81,13 +101,45 @@ namespace GetTogether.DAL.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("GetTogether.DAL.Entities.User", b =>
+            modelBuilder.Entity("GetTogether.DAL.Entities.Party", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Privacy")
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Parties");
+                });
+
+            modelBuilder.Entity("GetTogether.DAL.Entities.User", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Description")
                         .HasColumnType("text");
@@ -95,6 +147,9 @@ namespace GetTogether.DAL.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<long?>("ImageId")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Login")
                         .IsRequired()
@@ -109,6 +164,9 @@ namespace GetTogether.DAL.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
+                    b.HasIndex("ImageId")
+                        .IsUnique();
+
                     b.HasIndex("Login")
                         .IsUnique();
 
@@ -117,64 +175,74 @@ namespace GetTogether.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
-                            Description = "muhammad.name",
-                            Email = "Byron_Lehner72@yahoo.com",
-                            Login = "Byron.Lehner18",
-                            Name = "Byron"
+                            Id = 1L,
+                            Description = "carmen.net",
+                            Email = "Laura36@hotmail.com",
+                            Login = "Laura63",
+                            Name = "Laura"
                         },
                         new
                         {
-                            Id = 2,
-                            Description = "russell.biz",
-                            Email = "Gerard65@gmail.com",
-                            Login = "Gerard_Hegmann",
-                            Name = "Gerard"
+                            Id = 2L,
+                            Description = "vivian.info",
+                            Email = "Jody11@hotmail.com",
+                            Login = "Jody12",
+                            Name = "Jody"
                         },
                         new
                         {
-                            Id = 3,
-                            Description = "abdul.info",
-                            Email = "Robyn2@yahoo.com",
-                            Login = "Robyn.OConner",
-                            Name = "Robyn"
+                            Id = 3L,
+                            Description = "lew.org",
+                            Email = "Harriet93@hotmail.com",
+                            Login = "Harriet.Schmidt",
+                            Name = "Harriet"
                         },
                         new
                         {
-                            Id = 4,
-                            Description = "julianne.com",
-                            Email = "Juana.Grimes@gmail.com",
-                            Login = "Juana.Grimes15",
-                            Name = "Juana"
+                            Id = 4L,
+                            Description = "jacinthe.name",
+                            Email = "Dewey.Wehner@gmail.com",
+                            Login = "Dewey.Wehner21",
+                            Name = "Dewey"
                         },
                         new
                         {
-                            Id = 5,
-                            Description = "clementina.biz",
-                            Email = "Bethany5@hotmail.com",
-                            Login = "Bethany.Schumm",
-                            Name = "Bethany"
+                            Id = 5L,
+                            Description = "jaden.org",
+                            Email = "Leslie99@hotmail.com",
+                            Login = "Leslie_Wolf",
+                            Name = "Leslie"
                         });
                 });
 
             modelBuilder.Entity("object", b =>
                 {
-                    b.Property<int>("GroupId")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<long>("PartyId")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("FollowerId")
-                        .HasColumnType("integer");
+                    b.Property<long>("FollowerId")
+                        .HasColumnType("bigint");
 
-                    b.HasKey("GroupId", "UserId");
+                    b.Property<long>("GroupId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("OrganizerId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("UserId", "PartyId");
 
                     b.HasIndex("FollowerId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("GroupId");
 
-                    b.ToTable("ChatGroupsUsers", (string)null);
+                    b.HasIndex("OrganizerId");
+
+                    b.HasIndex("PartyId");
+
+                    b.ToTable("PartyVisitors", (string)null);
                 });
 
             modelBuilder.Entity("GetTogether.DAL.Entities.ChatGroup", b =>
@@ -213,6 +281,16 @@ namespace GetTogether.DAL.Migrations
                     b.Navigation("RepliedPerson");
                 });
 
+            modelBuilder.Entity("GetTogether.DAL.Entities.User", b =>
+                {
+                    b.HasOne("GetTogether.DAL.Entities.Image", "ImageAvatar")
+                        .WithOne()
+                        .HasForeignKey("GetTogether.DAL.Entities.User", "ImageId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("ImageAvatar");
+                });
+
             modelBuilder.Entity("object", b =>
                 {
                     b.HasOne("GetTogether.DAL.Entities.User", null)
@@ -229,8 +307,18 @@ namespace GetTogether.DAL.Migrations
 
                     b.HasOne("GetTogether.DAL.Entities.User", null)
                         .WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("OrganizerId")
+                        .IsRequired();
+
+                    b.HasOne("GetTogether.DAL.Entities.Party", null)
+                        .WithMany()
+                        .HasForeignKey("PartyId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GetTogether.DAL.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .IsRequired();
                 });
 

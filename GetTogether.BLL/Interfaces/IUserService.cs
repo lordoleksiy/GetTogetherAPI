@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GetTogether.Common.DTO;
+﻿using GetTogether.Common.DTO;
 using GetTogether.Common.DTO.User;
 
 namespace GetTogether.BLL.Interfaces;

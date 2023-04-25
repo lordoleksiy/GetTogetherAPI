@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using GetTogether.DAL.Context;
 
-namespace EasySpeak.Core.BLL.Services;
+namespace GetTogether.BLL.Services;
 
 public abstract class BaseService
 {

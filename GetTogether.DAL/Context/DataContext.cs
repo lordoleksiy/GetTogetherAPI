@@ -9,6 +9,8 @@ public class DataContext: DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Message> Messages { get; set; }
     public DbSet<ChatGroup> ChatGroups { get; set; }
+    public DbSet<Party> Parties { get; set; }
+
     public DataContext(DbContextOptions<DataContext> options) : base(options)
     { }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -18,6 +20,8 @@ public class DataContext: DbContext
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new ChatConfiguration());
         modelBuilder.ApplyConfiguration(new MessageConfiguration());
+        modelBuilder.ApplyConfiguration(new ImageConfiguration());
+        modelBuilder.ApplyConfiguration(new PartyConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }

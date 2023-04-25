@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using EasySpeak.Core.BLL.Services;
 using GetTogether.BLL.Interfaces;
 using GetTogether.Common.DTO;
 using GetTogether.Common.DTO.User;
@@ -11,10 +10,12 @@ namespace GetTogether.BLL.Services;
 
 public class UserService : BaseService, IUserService
 {
-    private IAccountService _accountService;
-    public UserService(DataContext context, IMapper mapper, IAccountService accountService) : base(context, mapper)
+    private readonly IAccountService _accountService;
+    private readonly IStorageService _storageService;
+    public UserService(DataContext context, IMapper mapper, IAccountService accountService, IStorageService storageService) : base(context, mapper)
     {
         _accountService = accountService;
+        _storageService = storageService;
     }
 
     public async Task<ICollection<UserDTO>> GetAll() => _mapper.Map<List<User>, ICollection<UserDTO>>(await _context.Users.ToListAsync());
