@@ -1,5 +1,4 @@
-﻿using GetTogether.BLL.Services;
-using Firebase.Storage;
+﻿using Firebase.Storage;
 using GetTogether.BLL.Interfaces;
 using GetTogether.Common.DTO.Image;
 using GetTogether.DAL.Context;

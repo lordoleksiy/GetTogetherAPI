@@ -42,7 +42,22 @@ public class UserService : BaseService, IUserService
         var user = await _context.Users.FirstOrDefaultAsync(a => a.Id == _accountService.UserId) 
             ?? throw new ArgumentException($"Failed to find the user with id {_accountService.UserId}");
 
-        _mapper.Map<UserDTO, User>(userDTO, user);
+        if (userDTO.Email != null)
+        {
+            user.Email = userDTO.Email;
+        }
+        if (userDTO.Name != null)
+        {
+            user.Name = userDTO.Name;
+        }
+        if (userDTO.Login != null) 
+        {
+            user.Login = userDTO.Login;
+        }
+        if (userDTO.Description != null)
+        {
+            user.Description = userDTO.Description;
+        }
         await _context.SaveChangesAsync();
         return _mapper.Map<User, UserDTO>(user);
     }

@@ -1126,24 +1126,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lordo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lordo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\C#\\GetTogether\\GetTogether.DAL\\GetTogether.DAL.csproj",
+      "projectUniqueName": "D:\\Programming\\.NET\\Other\\GetTogetherAPI\\GetTogether.DAL\\GetTogether.DAL.csproj",
       "projectName": "GetTogether.DAL",
-      "projectPath": "D:\\Programming\\C#\\GetTogether\\GetTogether.DAL\\GetTogether.DAL.csproj",
+      "projectPath": "D:\\Programming\\.NET\\Other\\GetTogetherAPI\\GetTogether.DAL\\GetTogether.DAL.csproj",
       "packagesPath": "C:\\Users\\lordo\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\C#\\GetTogether\\GetTogether.DAL\\obj\\",
+      "outputPath": "D:\\Programming\\.NET\\Other\\GetTogetherAPI\\GetTogether.DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\lordo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1157,8 +1152,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Programming\\C#\\GetTogether\\GetTogether.Common\\GetTogether.Common.csproj": {
-              "projectPath": "D:\\Programming\\C#\\GetTogether\\GetTogether.Common\\GetTogether.Common.csproj"
+            "D:\\Programming\\.NET\\Other\\GetTogetherAPI\\GetTogether.Common\\GetTogether.Common.csproj": {
+              "projectPath": "D:\\Programming\\.NET\\Other\\GetTogetherAPI\\GetTogether.Common\\GetTogether.Common.csproj"
             }
           }
         }
@@ -1212,7 +1207,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

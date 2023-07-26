@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GetTogether.DAL
-build_property.ProjectDir = D:\Programming\C#\GetTogether\GetTogether.DAL\
+build_property.ProjectDir = D:\Programming\.NET\Other\GetTogetherAPI\GetTogether.DAL\

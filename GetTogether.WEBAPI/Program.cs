@@ -1,6 +1,7 @@
 using CollectionsAndLinq.WebApi.Infrastructure;
 using GetTogether.Core.WebAPI.Middlewares;
 using GetTogether.WEBAPI.Infrastructure;
+using GetTogether.WEBAPI.Middlewares;
 
 namespace GetTogether.WEBAPI
 {
@@ -30,11 +31,12 @@ namespace GetTogether.WEBAPI
             .AllowAnyMethod()
             .AllowAnyOrigin());
 
-            app.UseMiddlewares();
-
-            app.UseAuthentication();
-            app.UseAuthorization();
             app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
+            //app.UseMiddleware<AuthMiddleware>();
+            app.UseMiddleware<StorageMiddleware>();
+
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
             app.MapControllers();
             app.UseStartupMigrations();

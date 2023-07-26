@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6puN12seEFiVUYB6pgVqKHZhP63cF+3Gna0Sz+e/9Fn6uasLYs/JPeXH+PLHScIazaHgfbtGFXvmhEYgLrsLHA==",
+  "dgSpecHash": "TCk9ZWxRWq+IV6ObAm+1vua3rlMayqz5hWPFLn61+9o5Rw780UOjSGVIHpXqSqImjktrlgJ2sUE5oeDvrCcxNw==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\C#\\GetTogether\\GetTogether.WEBAPI\\GetTogether.WEBAPI.csproj",
+  "projectFilePath": "D:\\Programming\\.NET\\Other\\GetTogetherAPI\\GetTogether.WEBAPI\\GetTogether.WEBAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lordo\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\lordo\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

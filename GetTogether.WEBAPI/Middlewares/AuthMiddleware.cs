@@ -1,5 +1,4 @@
-﻿using System.Security.Claims;
-using FirebaseAdmin.Auth;
+﻿using FirebaseAdmin.Auth;
 using GetTogether.BLL.Interfaces;
 
 namespace GetTogether.WEBAPI.Middlewares;

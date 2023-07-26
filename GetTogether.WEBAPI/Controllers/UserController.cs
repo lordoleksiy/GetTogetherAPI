@@ -1,14 +1,11 @@
 ﻿using GetTogether.BLL.Interfaces;
-using GetTogether.Common.DTO.Image;
 using GetTogether.Common.DTO.User;
-using GetTogether.WEBAPI.Validation;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetTogether.WEBAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -54,15 +51,15 @@ namespace GetTogether.WEBAPI.Controllers
             return Ok(user);
         }
 
-        [HttpPost("avatar")]
-        public async Task<ActionResult> UploadAvatar(IFormFile image)
-        {
-            if (image.Validate())
-            {
-                NewImageDTO imgDTO = new(image.OpenReadStream(), image.FileName);
-                return Ok(await _userService.UploadAvatar(imgDTO));
-            }
-            return BadRequest();
-        }
+        //[HttpPost("avatar")]
+        //public async Task<ActionResult> UploadAvatar(IFormFile image)
+        //{
+        //    if (image.Validate())
+        //    {
+        //        NewImageDTO imgDTO = new NewImageDTO(image.OpenReadStream(), image.FileName, Common.Enums.ImageType.Avatars);
+        //        return Ok(await _userService.UploadAvatar(imgDTO));
+        //    }
+        //    return BadRequest();
+        //}
     }
 }

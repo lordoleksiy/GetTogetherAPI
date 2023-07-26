@@ -8,7 +8,6 @@ using GetTogether.WEBAPI.Infrastructure;
 using GetTogether.WEBAPI.Middlewares;
 using GetTogether.WEBAPI.Validation.User;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace CollectionsAndLinq.WebApi.Infrastructure;
 
@@ -32,12 +31,6 @@ public static class ConfigServices
         services.AddScoped<IStorageService, StorageService>();
         services.AddScoped<IPartyService, PartyService>();
         services.AddFirebaseApp();
-    }
-
-    public static void UseMiddlewares(this IApplicationBuilder builder)
-    {
-        builder.UseMiddleware<AuthMiddleware>();
-        builder.UseMiddleware<StorageMiddleware>();
     }
 
     public static void AddValidators(this IServiceCollection services)
